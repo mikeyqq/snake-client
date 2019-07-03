@@ -17,38 +17,6 @@ const connect = function() {
     conn.write('Hello QQQ!\n');
   });
 
-  /*
-  conn.on('connect', () => {
-    setTimeout(() => {
-      conn.write('Move: left');
-    }, 3000);
-    conn.on('connect', () => {
-      setTimeout(() => {
-        conn.write('Move: left');
-      }, 3000);
-      conn.on('connect', () => {
-        setTimeout(() => {
-          conn.write('Move: left');
-        }, 3000);
-        conn.on('connect', () => {
-          setTimeout(() => {
-            conn.write('Move: left');
-          }, 3000);
-          conn.on('connect', () => {
-            setTimeout(() => {
-              conn.write('Move: left');
-            }, 3000);
-            conn.on('connect', () => {
-              setTimeout(() => {
-                conn.write('Move: left');
-              }, 3000);
-            });
-          });
-        });
-      });
-    });
-  });
-  */
 
   return conn;
 };
