@@ -1,4 +1,5 @@
 let connection;
+let direction;
 
 
 const handleUserInput = function(key) {
@@ -6,16 +7,30 @@ const handleUserInput = function(key) {
     process.exit();
   }
   if (key === 'w') {
+    clearInterval(direction);
+    direction = setInterval(() => {
     connection.write('Move: up');
+  }, 10);
+
   }
   if (key === 's') {
+    clearInterval(direction);
+    direction = setInterval(() => {
     connection.write('Move: down');
+  }, 10);
   }
   if (key === 'a') {
+    clearInterval(direction);
+    direction = setInterval(() => {
     connection.write('Move: left');
-  }
+  }, 10);
+
   if (key === 'd') {
+    clearInterval(direction);
+    direction = setInterval(() => {
     connection.write('Move: right');
+  }, 10);
+
   }
 };
 
