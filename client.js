@@ -1,9 +1,10 @@
 const net = require('net');
+const { IP, PORT } = require('./constants');
 
 const connect = function() {
   const conn = net.createConnection({
-    host: '172.46.0.110',
-    port: 50541
+    host: IP,
+    port: PORT
   });
   // interpret incoming data as text
   conn.setEncoding('utf8');
@@ -13,9 +14,10 @@ const connect = function() {
 
   conn.on('connect', () => {
     console.log('Successfully connected to game server!');
-    conn.write('Name: QQQ!\n');
-    conn.write('Hello QQQ!\n');
+    conn.write('Name: QQQ!');
+    conn.write('Say: GGWPP PEWPEW!');
   });
+
 
 
   return conn;
