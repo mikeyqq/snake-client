@@ -1,13 +1,4 @@
-const { connect } = require('./client');
-const { setupInput } = require('./input');
-
-console.log('Connecting ...');
-connect();
-
-setupInput();
-
-
-/*const handleUserInput = function(key){
+const handleUserInput = function(key){
   if (key === '\u0003') {
     process.exit();
   }
@@ -35,4 +26,4 @@ const setupInput = function() {
   return stdin;
 }
 
-setupInput();*/
+module.exports = {setupInput};
